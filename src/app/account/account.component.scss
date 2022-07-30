@@ -1,0 +1,18 @@
+table {
+  width: 70%;
+  position: center;
+  margin-left: 15%;
+}
+.col {
+  text-align: center;
+}
+.row {
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  margin-left: 15%;
+}
+.card-transaction {
+  background-color: whitesmoke;
+}

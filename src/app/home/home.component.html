@@ -1,0 +1,11 @@
+
+  <form style="width: 100%">
+    <mat-form-field appearance="outline">
+      <mat-label>Account</mat-label>
+      <input matInput [(ngModel)]="accountId" value="{{accountId}}"  name="accountId" (input)="changeAccountId()">
+    </mat-form-field>
+  </form>
+  <button mat-raised-button color="primary" [routerLink]="['/accountId/' + accountId]" [disabled]="changeAccountId()" >Search</button>
+  <div class="content" role="main">
+  </div>
+<router-outlet></router-outlet>

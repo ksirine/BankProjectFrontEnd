@@ -1,0 +1,23 @@
+<mat-card class="card-transaction" xmlns="http://www.w3.org/1999/html">
+  <mat-card-title class="transaction-title">
+    <span>{{transactionType}}</span>
+  </mat-card-title>
+  <mat-card-title class="transaction-sub-title">
+    <span>{{msgError}}</span>
+  </mat-card-title>
+  <mat-card-content class="content-transaction">
+    <form class="transaction-form">
+      <div>
+        <mat-form-field class="transaction-full-width" appearance="outline">
+          <mat-label>Amount</mat-label>
+          <input matInput type="number" placeholder="Ex. 1500" [(ngModel)]="transactionAmount" name="transactionAmount">
+          <span>€</span>
+        </mat-form-field>
+      </div>
+    </form>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button color="primary" (click)="saveTransaction()">Save</button>
+    <button mat-raised-button color="warn" [routerLink]="['/accountId/' + accountId]" >cancel</button>
+  </mat-card-actions>
+</mat-card>
